@@ -14,7 +14,6 @@ import Footer from "./components/Footer";
 
 
 function App() {
-  
   const theme={
       colors: {
         heading: "rgb(24 24 29)",
@@ -53,7 +52,6 @@ function App() {
     <Route path="/singleproduct/:id" element={<SingleProduct />} />
     <Route path="/cart" element={<Cart />} />
     <Route path="*" element={<ErrorPage />} />
-
    </Routes>
    <Footer/>
    </Router>

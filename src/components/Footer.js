@@ -23,13 +23,13 @@ const Footer = () => {
               <h3>Follow Us</h3>
               <div className="footer-social--icons">
                 <div>
-                  <FaDiscord className="icons" />
+                <a href="https://discord.com/channels/@me"><FaDiscord className="icons" /></a>
                 </div>
                 <div>
-                  <FaInstagram className="icons" />
+                 <a href="https://www.instagram.com/accounts/login/"> <FaInstagram className="icons" /></a>
                 </div>
                 <div>
-                    <FaYoutube className="icons" />
+                    <a href="https://www.youtube.com/channel/UCTZkKJkobQCbSGw6Y6Kxctg"><FaYoutube className="icons" /></a>
                 </div>
               </div>
             </div>

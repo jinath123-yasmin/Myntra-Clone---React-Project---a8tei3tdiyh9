@@ -30,7 +30,7 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
 
-   useEffect(() => {
+ useEffect(() => {
     dispatch({ type: "CART_TOTAL_ITEM" });
     dispatch({ type: "CART_TOTAL_PRICE" });
     localStorage.setItem("thapaCart", JSON.stringify(state.cart));

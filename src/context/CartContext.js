@@ -3,14 +3,14 @@ import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
 
-const getLocalCartData = () => {
-  let localCartData = localStorage.getItem("thapaCart");
-  if (localCartData === []) {
-    return [];
-  } else {
-    return JSON.parse(localCartData);
-  }
-};
+// const getLocalCartData = () => {
+//   let localCartData = localStorage.getItem("thapaCart");
+//   if (localCartData === []) {
+//     return [];
+//   } else {
+//     return JSON.parse(localCartData);
+//   }
+// };
 
 const initialState = {
   cart: getLocalCartData(),
@@ -30,11 +30,11 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
 
- useEffect(() => {
-    dispatch({ type: "CART_TOTAL_ITEM" });
-    dispatch({ type: "CART_TOTAL_PRICE" });
-    localStorage.setItem("thapaCart", JSON.stringify(state.cart));
-  }, [state.cart]);
+ // useEffect(() => {
+ //    dispatch({ type: "CART_TOTAL_ITEM" });
+ //    dispatch({ type: "CART_TOTAL_PRICE" });
+ //    localStorage.setItem("thapaCart", JSON.stringify(state.cart));
+ //  }, [state.cart]);
 
   return (
     <CartContext.Provider value={{ ...state, addToCart, removeItem }}>

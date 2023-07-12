@@ -13,7 +13,7 @@ const CartContext = createContext();
 // };
 
 const initialState = {
-  cart: getLocalCartData(),
+  cart: [],
   total_item: "",
   total_amount: "",
   shipping_fee: 50000,
